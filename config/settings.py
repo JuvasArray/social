@@ -29,13 +29,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'account.apps.AccountConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'account.apps.AccountConfig',
     # Third party apps
     'crispy_forms',
 ]
@@ -119,6 +119,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 # Logging
-LOGIN_REDIRECT_URL = 'account:dashboard'
-LOGIN_URL = 'account:login'
-LOGOUT_URL = 'account:logout'
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+
+# Crispy
+CRISPY_TEMPLATE_PACK = 'BOOTSTRAP4'
+
+# Email backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
