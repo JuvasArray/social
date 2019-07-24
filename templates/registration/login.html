@@ -12,6 +12,7 @@
         <input class="btn btn-primary" type="submit" value="{{ next }}">
     </form>
     <p>
-        <a href="{% url "password_reset" %}">Forgotten your password?</a>
+        <a href="{% url "password_reset" %}">Forgotten your password?</a>.If you don't have an account
+        <a href="{% url "register" %}">register here</a>
     </p>
 {% endblock %}
