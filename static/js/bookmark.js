@@ -10,8 +10,7 @@
         css.attr({
             rel: 'stylesheet',
             type: 'text/css',
-            href: static_url + 'css/bookmarklet.css?r=' +
-                Math.floor(Math.random() * 99999999999999999999)
+            href: static_url + 'css/bookmarklet.css?r=' + Math.floor(Math.random() * 99999999999999999999)
         });
         jQuery('head').append(css);
         box_html = '<div id="bookmarklet"><a href="#" id="close">&times;</a>' +
@@ -21,11 +20,9 @@
             jQuery('#bookmarklet').remove();
         });
         jQuery.each(jQuery('img[src$="jpg"]'), function (index, image) {
-            if (jQuery(image).width() >= min_width && jQuery(image).height()
-                >= min_height) {
+            if (jQuery(image).width() >= min_width && jQuery(image).height() >= min_height) {
                 image_url = jQuery(image).attr('src');
-                jQuery('#bookmarklet .images').append('<a href="#"><img src="' +
-                    image_url + '" /></a>');
+                jQuery('#bookmarklet.images').append('<a href="#"><img src="' + image_url + '" /></a>');
             }
         });
 
@@ -34,8 +31,8 @@
     if (typeof window.jQuery != 'undefined') {
         bookmarklet();
     } else {
-        var conflict = typeof window.$ != 'undefined';
-        var script = document.createElement('script');
+        let conflict = typeof window.$ != 'undefined';
+        let script = document.createElement('script');
         script.src = '//ajax.googleapis.com/ajax/libs/jquery/' +
             jquery_version + '/jquery.min.js';
         document.head.appendChild(script);

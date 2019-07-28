@@ -12,7 +12,7 @@ SECRET_KEY = '&11w=34!pb)$6j82^di^v$r#1fm1=fmiq9rpw&h4_(4vmnkg0)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1', '7e07e279.ngrok.io']
+ALLOWED_HOSTS = ['mysite.com', '127.0.0.1', '7e07e279.ngrok.io']
 
 # Application definition
 
@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     # Third party apps
     'crispy_forms',
     'social_django',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
